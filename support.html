@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Folders — Support</title>
+  <style>
+    :root { color-scheme: light dark; --fg: #111; --muted: #555; --bg: #fafafa; --card: #fff; --line: #e5e5e5; }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #f2f2f2; --muted: #aaa; --bg: #111; --card: #1c1c1c; --line: #333; }
+    }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--fg); line-height: 1.55; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 28px 20px 64px; }
+    h1 { font-size: 1.7rem; margin: 0 0 8px; }
+    h2 { font-size: 1.15rem; margin: 28px 0 10px; }
+    .sub { color: var(--muted); margin: 0 0 24px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+    a { color: #0a66ff; }
+    .lang { display: flex; gap: 8px; margin-bottom: 18px; }
+    .lang button { border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+    .lang button[aria-pressed="true"] { border-color: #0a66ff; }
+    [data-lang="tr"] { display: none; }
+    html[lang="tr"] [data-lang="en"] { display: none; }
+    html[lang="tr"] [data-lang="tr"] { display: initial; }
+    ul { padding-left: 1.2rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-set-lang="tr" aria-pressed="false">TR</button>
+    </div>
+
+    <h1>
+      <span data-lang="en">My Folders Support</span>
+      <span data-lang="tr">Klasörlerim Destek</span>
+    </h1>
+    <p class="sub">
+      <span data-lang="en">Private folders for photos, videos, documents, and files.</span>
+      <span data-lang="tr">Fotoğraf, video, belge ve dosyalar için özel klasörler.</span>
+    </p>
+
+    <div class="card">
+      <h2><span data-lang="en">Contact</span><span data-lang="tr">İletişim</span></h2>
+      <p>
+        <span data-lang="en">Email:</span>
+        <span data-lang="tr">E-posta:</span>
+        <a href="mailto:kayan.metin@gmail.com">kayan.metin@gmail.com</a>
+      </p>
+
+      <h2><span data-lang="en">Common questions</span><span data-lang="tr">Sık sorulanlar</span></h2>
+      <ul>
+        <li>
+          <span data-lang="en"><strong>Forgot unlock code?</strong> On the PIN pad lock screen, use “Forgot code?” and answer your recovery question. Keep your recovery answer safe.</span>
+          <span data-lang="tr"><strong>Kilit kodunu unuttum?</strong> PIN pedi kilit ekranında “Kodu unuttum?” seçeneğini kullanın ve kurtarma sorunuza cevap verin. Kurtarma cevabınızı güvenli saklayın.</span>
+        </li>
+        <li>
+          <span data-lang="en"><strong>Folder browser unlock:</strong> On Recents, type your unlock code in Search and press Search. Face ID / Touch ID may then be required.</span>
+          <span data-lang="tr"><strong>Klasör tarayıcı kilidi:</strong> Son Kullanılanlar’da Arama alanına kilit kodunuzu yazıp Ara’ya basın. Ardından Face ID / Touch ID istenebilir.</span>
+        </li>
+        <li>
+          <span data-lang="en"><strong>iCloud data after uninstall:</strong> Deleting the app may not erase private CloudKit data. Reinstall and delete items / empty Trash, or manage storage in iCloud settings.</span>
+          <span data-lang="tr"><strong>Uygulamayı sildikten sonra iCloud:</strong> Uygulamayı silmek özel CloudKit verilerini silmeyebilir. Yeniden yükleyip öğeleri silin / Çöp’ü boşaltın veya iCloud ayarlarından depolamayı yönetin.</span>
+        </li>
+      </ul>
+
+      <p>
+        <a href="privacy-policy.html">
+          <span data-lang="en">Privacy Policy</span>
+          <span data-lang="tr">Gizlilik Politikası</span>
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll("[data-set-lang]");
+    const setLang = (lang) => {
+      document.documentElement.lang = lang;
+      buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.getAttribute("data-set-lang") === lang)));
+      localStorage.setItem("myfolders-lang", lang);
+    };
+    buttons.forEach((b) => b.addEventListener("click", () => setLang(b.getAttribute("data-set-lang"))));
+    setLang(localStorage.getItem("myfolders-lang") || ((navigator.language || "en").startsWith("tr") ? "tr" : "en"));
+  </script>
+</body>
+</html>

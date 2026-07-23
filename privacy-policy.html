@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Folders — Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; --fg: #111; --muted: #555; --bg: #fafafa; --card: #fff; --line: #e5e5e5; }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #f2f2f2; --muted: #aaa; --bg: #111; --card: #1c1c1c; --line: #333; }
+    }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--fg); line-height: 1.55; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 28px 20px 64px; }
+    h1 { font-size: 1.7rem; margin: 0 0 8px; }
+    h2 { font-size: 1.15rem; margin: 28px 0 10px; }
+    .sub { color: var(--muted); margin: 0 0 24px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 6px; }
+    ul { padding-left: 1.2rem; }
+    a { color: #0a66ff; }
+    .lang { display: flex; gap: 8px; margin-bottom: 18px; }
+    .lang button { border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+    .lang button[aria-pressed="true"] { border-color: #0a66ff; }
+    [data-lang="tr"] { display: none; }
+    html[lang="tr"] [data-lang="en"] { display: none; }
+    html[lang="tr"] [data-lang="tr"] { display: initial; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-set-lang="tr" aria-pressed="false">TR</button>
+    </div>
+
+    <h1>
+      <span data-lang="en">My Folders Privacy Policy</span>
+      <span data-lang="tr">Klasörlerim Gizlilik Politikası</span>
+    </h1>
+    <p class="sub">
+      <strong><span data-lang="en">Last updated:</span><span data-lang="tr">Son güncelleme:</span></strong>
+      <span data-lang="en"> July 24, 2026</span>
+      <span data-lang="tr"> 24 Temmuz 2026</span>
+    </p>
+
+    <div class="card">
+      <p>
+        <span data-lang="en">My Folders (“the App”) is private storage for photos, videos, documents, and other files on iPhone and iPad. This policy explains what data is stored and how it is handled.</span>
+        <span data-lang="tr">Klasörlerim (“Uygulama”), iPhone ve iPad’de fotoğraf, video, belge ve diğer dosyalar için özel bir depolama uygulamasıdır. Bu politika hangi verilerin saklandığını ve nasıl işlendiğini açıklar.</span>
+      </p>
+
+      <h2><span data-lang="en">Data stored on your device / iCloud</span><span data-lang="tr">Cihazınızda / iCloud’da saklanan veriler</span></h2>
+      <ul>
+        <li>
+          <span data-lang="en"><strong>Unlock code / PIN:</strong> stored only on your device in the iOS Keychain as a salted hash. We cannot read your PIN.</span>
+          <span data-lang="tr"><strong>Kilit kodu / PIN:</strong> yalnızca cihazınızda iOS Keychain’de tuzlanmış hash olarak saklanır. PIN’inizi okuyamayız.</span>
+        </li>
+        <li>
+          <span data-lang="en"><strong>Photos, videos, documents, and files</strong> you import are stored in a SwiftData store and may sync to your personal CloudKit private database when iCloud is available.</span>
+          <span data-lang="tr"><strong>İçe aktardığınız fotoğraf, video, belge ve dosyalar</strong> SwiftData’da saklanır ve iCloud açıksa kişisel CloudKit özel veritabanınıza senkronize edilebilir.</span>
+        </li>
+        <li>
+          <span data-lang="en"><strong>App preferences</strong> (lock style, auto-lock interval, biometric toggle, icon choice) are stored in UserDefaults on your device.</span>
+          <span data-lang="tr"><strong>Uygulama tercihleri</strong> (kilit stili, otomatik kilit süresi, biyometrik ayar, ikon seçimi) cihazınızdaki UserDefaults’ta saklanır.</span>
+        </li>
+      </ul>
+
+      <h2><span data-lang="en">What we do not do</span><span data-lang="tr">Yapmadıklarımız</span></h2>
+      <ul>
+        <li><span data-lang="en">We do not operate our own media servers for vault content.</span><span data-lang="tr">Kasa içeriği için kendi medya sunucularımızı işletmiyoruz.</span></li>
+        <li><span data-lang="en">We do not sell personal data.</span><span data-lang="tr">Kişisel verileri satmıyoruz.</span></li>
+        <li><span data-lang="en">We do not use advertising or tracking SDKs.</span><span data-lang="tr">Reklam veya izleme SDK’ları kullanmıyoruz.</span></li>
+        <li><span data-lang="en">We cannot access your CloudKit private database; it is scoped to your Apple ID.</span><span data-lang="tr">CloudKit özel veritabanınıza erişemeyiz; bu veritabanı Apple ID’nize bağlıdır.</span></li>
+      </ul>
+
+      <h2><span data-lang="en">Face ID / Touch ID</span><span data-lang="tr">Face ID / Touch ID</span></h2>
+      <p>
+        <span data-lang="en">Biometric authentication is performed by Apple’s LocalAuthentication framework on your device. Biometric templates never leave the device Secure Enclave.</span>
+        <span data-lang="tr">Biyometrik doğrulama, Apple’ın LocalAuthentication çerçevesi ile cihazınızda yapılır. Biyometrik şablonlar cihazın Secure Enclave’inden çıkmaz.</span>
+      </p>
+
+      <h2><span data-lang="en">Permissions</span><span data-lang="tr">İzinler</span></h2>
+      <ul>
+        <li><span data-lang="en"><strong>Face ID</strong> — unlock confirmation</span><span data-lang="tr"><strong>Face ID</strong> — kilit açma onayı</span></li>
+        <li><span data-lang="en"><strong>Photo Library</strong> — import media into private storage</span><span data-lang="tr"><strong>Fotoğraf Kitaplığı</strong> — medyayı özel depolamaya aktarma</span></li>
+        <li><span data-lang="en"><strong>Camera / Microphone</strong> — capture into private storage</span><span data-lang="tr"><strong>Kamera / Mikrofon</strong> — özel depolamaya kayıt</span></li>
+        <li><span data-lang="en"><strong>iCloud / CloudKit</strong> — optional sync of your private items</span><span data-lang="tr"><strong>iCloud / CloudKit</strong> — özel öğelerin isteğe bağlı senkronizasyonu</span></li>
+      </ul>
+
+      <h2><span data-lang="en">Deletion</span><span data-lang="tr">Silme</span></h2>
+      <ul>
+        <li><span data-lang="en">Soft-deleted items remain in Trash for 30 days, then are permanently removed.</span><span data-lang="tr">Geçici silinen öğeler Çöp’te 30 gün kalır, sonra kalıcı olarak silinir.</span></li>
+        <li><span data-lang="en">You may permanently delete items earlier from Trash.</span><span data-lang="tr">Öğeleri Çöp’ten daha erken kalıcı olarak silebilirsiniz.</span></li>
+        <li><span data-lang="en">Removing the app may leave CloudKit private data associated with your Apple ID until you delete those items (reinstall, empty Trash / delete items, or manage iCloud storage).</span><span data-lang="tr">Uygulamayı silmek, Apple ID’nize bağlı CloudKit özel verilerini otomatik silmeyebilir. Bu verileri silmek için uygulamayı yeniden yükleyip öğeleri silin / Çöp’ü boşaltın veya iCloud depolama alanını yönetin.</span></li>
+      </ul>
+
+      <h2><span data-lang="en">Children</span><span data-lang="tr">Çocuklar</span></h2>
+      <p>
+        <span data-lang="en">The App is not directed to children under 13. Do not store personal information of children in a way that violates applicable law.</span>
+        <span data-lang="tr">Uygulama 13 yaşın altındaki çocuklara yönelik değildir. Çocuklara ait kişisel bilgileri yürürlükteki yasalara aykırı şekilde saklamayın.</span>
+      </p>
+
+      <h2><span data-lang="en">Contact</span><span data-lang="tr">İletişim</span></h2>
+      <p>
+        <span data-lang="en">Questions about this policy:</span>
+        <span data-lang="tr">Bu politika hakkında sorularınız için:</span>
+        <a href="mailto:kayan.metin@gmail.com">kayan.metin@gmail.com</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll("[data-set-lang]");
+    const setLang = (lang) => {
+      document.documentElement.lang = lang;
+      buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.getAttribute("data-set-lang") === lang)));
+      localStorage.setItem("myfolders-lang", lang);
+    };
+    buttons.forEach((b) => b.addEventListener("click", () => setLang(b.getAttribute("data-set-lang"))));
+    setLang(localStorage.getItem("myfolders-lang") || ((navigator.language || "en").startsWith("tr") ? "tr" : "en"));
+  </script>
+</body>
+</html>
